@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Engine\Core\Application\Application.cpp" />
+    <ClCompile Include="Engine\Core\Camera\Camera.cpp" />
+    <ClCompile Include="Engine\Core\Camera\CameraController.cpp" />
+    <ClCompile Include="Game\TerrainGenerator.cpp" />
+    <ClCompile Include="Game\UiLayer.h" />
+    <ClCompile Include="Engine\ImGui\ImGuiLayer.cpp" />
+    <ClCompile Include="Engine\Core\Log\Log.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Engine\Core\OpenGl\Renderer\Renderer.cpp" />
+    <ClCompile Include="Engine\Core\OpenGl\Renderer\RendererApi.cpp" />
+    <ClCompile Include="Engine\Core\OpenGl\Shader\Shader.cpp" />
+    <ClCompile Include="Engine\Core\OpenGl\Texture\Texture.cpp" />
+    <ClCompile Include="Engine\Utils\MapRange.h" />
+    <ClCompile Include="Engine\Vendor\Optick\src\optick_capi.cpp" />
+    <ClCompile Include="Engine\Vendor\Optick\src\optick_core.cpp" />
+    <ClCompile Include="Engine\Vendor\Optick\src\optick_gpu.cpp" />
+    <ClCompile Include="Engine\Vendor\Optick\src\optick_gpu.d3d12.cpp" />
+    <ClCompile Include="Engine\Vendor\Optick\src\optick_gpu.vulkan.cpp" />
+    <ClCompile Include="Engine\Vendor\Optick\src\optick_message.cpp" />
+    <ClCompile Include="Engine\Vendor\Optick\src\optick_miniz.cpp" />
+    <ClCompile Include="Engine\Vendor\Optick\src\optick_serialization.cpp" />
+    <ClCompile Include="Engine\Vendor\Optick\src\optick_server.cpp" />
+    <ClCompile Include="Engine\Core\Window\Window.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Engine\Core\Application\Application.h" />
+    <ClInclude Include="Engine\Core\Camera\Camera.h" />
+    <ClInclude Include="Engine\Core\Camera\CameraController.h" />
+    <ClInclude Include="Engine\Debug\Instrumentor.h" />
+    <ClInclude Include="Engine\Core\Event\DataEvent.h" />
+    <ClInclude Include="Engine\Core\Event\Event.h" />
+    <ClInclude Include="Engine\Core\Event\KeyEvent.h" />
+    <ClInclude Include="Engine\Core\Event\MouseEvent.h" />
+    <ClInclude Include="Engine\Core\Event\WindowEvent.h" />
+    <ClInclude Include="Game\Chunk.h" />
+    <ClInclude Include="Game\HeightMap.h" />
+    <ClInclude Include="Game\MainLayer.h" />
+    <ClInclude Include="Game\TerrainGenerator.h" />
+    <ClInclude Include="Engine\ImGui\ImGuiLayer.h" />
+    <ClInclude Include="Engine\Core\Layer\Layer.h" />
+    <ClInclude Include="Engine\Core\Layer\LayerStack.h" />
+    <ClInclude Include="Engine\Core\Log\Log.h" />
+    <ClInclude Include="Engine\Core\OpenGl\Buffer\Buffer.h" />
+    <ClInclude Include="Engine\Core\OpenGl\Buffer\IndexBuffer.h" />
+    <ClInclude Include="Engine\Core\OpenGl\Buffer\UniformBuffer.h" />
+    <ClInclude Include="Engine\Core\OpenGl\Buffer\VertexArray.h" />
+    <ClInclude Include="Engine\Core\OpenGl\Buffer\VertexBuffer.h" />
+    <ClInclude Include="Engine\Core\OpenGl\Renderer\Renderer.h" />
+    <ClInclude Include="Engine\Core\OpenGl\Renderer\RendererApi.h" />
+    <ClInclude Include="Engine\Core\OpenGl\Shader\Shader.h" />
+    <ClInclude Include="Engine\Core\OpenGl\Texture\Texture.h" />
+    <ClInclude Include="Engine\Utils\Factory.h" />
+    <ClInclude Include="Engine\Utils\Typelist.h" />
+    <ClInclude Include="Engine\Vendor\Optick\src\optick.config.h" />
+    <ClInclude Include="Engine\Vendor\Optick\src\optick.h" />
+    <ClInclude Include="Engine\Vendor\Optick\src\optick_capi.h" />
+    <ClInclude Include="Engine\Vendor\Optick\src\optick_common.h" />
+    <ClInclude Include="Engine\Vendor\Optick\src\optick_core.freebsd.h" />
+    <ClInclude Include="Engine\Vendor\Optick\src\optick_core.h" />
+    <ClInclude Include="Engine\Vendor\Optick\src\optick_core.linux.h" />
+    <ClInclude Include="Engine\Vendor\Optick\src\optick_core.macos.h" />
+    <ClInclude Include="Engine\Vendor\Optick\src\optick_core.platform.h" />
+    <ClInclude Include="Engine\Vendor\Optick\src\optick_core.win.h" />
+    <ClInclude Include="Engine\Vendor\Optick\src\optick_gpu.h" />
+    <ClInclude Include="Engine\Vendor\Optick\src\optick_memory.h" />
+    <ClInclude Include="Engine\Vendor\Optick\src\optick_message.h" />
+    <ClInclude Include="Engine\Vendor\Optick\src\optick_miniz.h" />
+    <ClInclude Include="Engine\Vendor\Optick\src\optick_serialization.h" />
+    <ClInclude Include="Engine\Vendor\Optick\src\optick_server.h" />
+    <ClInclude Include="Engine\Core\Window\Input.h" />
+    <ClInclude Include="Engine\Core\Window\Window.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\shaders\fragmentShader.glsl" />
+    <None Include="assets\shaders\Map\fragmentShader.glsl" />
+    <None Include="assets\shaders\Map\vertexShader.glsl" />
+    <None Include="assets\shaders\vertexShader.glsl" />
+    <None Include="imgui.ini" />
+    <CopyFileToFolders Include="Game\Vendor\FastNoise2\bin\FastNoise.dll">
+      <FileType>Document</FileType>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="Game\Vendor\FastNoise2\bin\FastNoiseD.dll">
+      <FileType>Document</FileType>
+    </CopyFileToFolders>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="assets\textures\Grass.jpg" />
+    <Image Include="assets\textures\Neige.png" />
+    <Image Include="assets\textures\Rock.jpg" />
+    <Image Include="assets\textures\sand.bmp" />
+    <Image Include="assets\textures\texture.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="assets\fonts\OpenSans-Bold.ttf" />
+    <Font Include="assets\fonts\OpenSans-BoldItalic.ttf" />
+    <Font Include="assets\fonts\OpenSans-ExtraBold.ttf" />
+    <Font Include="assets\fonts\OpenSans-ExtraBoldItalic.ttf" />
+    <Font Include="assets\fonts\OpenSans-Italic.ttf" />
+    <Font Include="assets\fonts\OpenSans-Light.ttf" />
+    <Font Include="assets\fonts\OpenSans-LightItalic.ttf" />
+    <Font Include="assets\fonts\OpenSans-Regular.ttf" />
+    <Font Include="assets\fonts\OpenSans-SemiBold.ttf" />
+    <Font Include="assets\fonts\OpenSans-SemiBoldItalic.ttf" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{e0918439-87e3-43bf-b78a-41e3199004c5}</ProjectGuid>
+    <RootNamespace>opengl3dworld</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>./Game/Vendor/FastNoise2/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>./Game/Vendor/FastNoise2/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>FastNoise.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>./Game/Vendor/FastNoise2/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>./Game/Vendor/FastNoise2/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>FastNoise.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

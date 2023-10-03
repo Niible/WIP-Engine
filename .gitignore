@@ -30,3 +30,12 @@
 *.exe
 *.out
 *.app
+
+
+.vs/*
+.vs
+x64/Debug/*
+opengl-3d-world/x64/*
+Debug.log
+imgui.ini
+appData.txt
