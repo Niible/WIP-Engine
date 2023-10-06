@@ -8,10 +8,19 @@ namespace Engine
 	class MouseScrolledEvent;
 	class Event;
 
+	struct CameraControllerProperties
+	{
+		float fov;
+		float aspect_ratio;
+		float m_near;
+		float m_far;
+	};
+
 	class CameraController
 	{
 	public:
 		CameraController(float fov, float aspect_ratio, float near, float far);
+		CameraController(const CameraControllerProperties& properties);
 
 		void onUpdate(float ts);
 		void onEvent(Event& event);

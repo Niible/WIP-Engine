@@ -22,22 +22,30 @@ class TerrainGenerator
 public:
 	TerrainGenerator(glm::vec3 position, glm::ivec2 chunk_size);
 
-	void generateNewChunk(glm::ivec2 chunk_pos);
+	void generateChunk(glm::ivec2 position);
+
+	void unloadChunk(size_t index);
 
 	void onUpdate() const;
 
 	void onEvent(Event& e);
 
-private:
-	void setTerrainThresholds();
+	bool isChunkLoaded(glm::ivec2 position);
 
-	void generateInitialChunks();
+	void loadOrGenerateChunk(glm::ivec2 position);
+
+private:
+	void setTerrainThresholds() const;
+
 	void deleteAllChunks();
 
 public:
 	glm::ivec3 position;
 	glm::ivec2 chunk_size;
-	std::unordered_map<std::string, Ref<Chunk>> chunks;
+
+	std::vector<Ref<Chunk>> loaded_chunks;
+	std::vector<Ref<Chunk>> cached_chunks;
+
 	Ref<Shader> shader;
 
 	TerrainThresholds terrain_thresholds;

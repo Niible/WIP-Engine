@@ -88,8 +88,9 @@ private:
 	std::vector<float> m_vertices;
 	std::vector<uint32_t> m_indices;
 
-	HeightMapSettings height_map_settings;
 
 public:
 	VertexArray vertex_array;
+	HeightMapSettings height_map_settings;
+
 };

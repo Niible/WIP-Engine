@@ -26,6 +26,7 @@
     <ClCompile Include="Game\UiLayer.h" />
     <ClCompile Include="Engine\ImGui\ImGuiLayer.cpp" />
     <ClCompile Include="Engine\Core\Log\Log.cpp" />
+    <ClCompile Include="Game\World\World.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Engine\Core\OpenGl\Renderer\Renderer.cpp" />
     <ClCompile Include="Engine\Core\OpenGl\Renderer\RendererApi.cpp" />
@@ -90,6 +91,7 @@
     <ClInclude Include="Engine\Vendor\Optick\src\optick_server.h" />
     <ClInclude Include="Engine\Core\Window\Input.h" />
     <ClInclude Include="Engine\Core\Window\Window.h" />
+    <ClInclude Include="Game\World\World.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="assets\shaders\fragmentShader.glsl" />

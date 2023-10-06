@@ -14,6 +14,10 @@ CameraController::CameraController(const float fov, const float aspect_ratio, co
 {
 }
 
+CameraController::CameraController(const CameraControllerProperties& properties): m_camera(properties.fov, properties.aspect_ratio, properties.m_near, properties.m_far)
+{
+}
+
 void CameraController::onUpdate(const float ts)
 {
 	auto translation_speed = m_cameraTranslationSpeed * ts;
