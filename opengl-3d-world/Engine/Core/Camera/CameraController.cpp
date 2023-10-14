@@ -50,10 +50,7 @@ void CameraController::onUpdate(const float ts)
 void CameraController::onEvent(Event& event)
 {
 	EventDispatcher dispatcher(event);
-	dispatcher.dispatch<MouseScrolledEvent>([this](const MouseScrolledEvent& e)
-	{
-		return CameraController::onMouseScrolled(e);
-	});
+	dispatcher.dispatch<MouseScrolledEvent>([this](const MouseScrolledEvent& e){ return CameraController::onMouseScrolled(e); });
 	dispatcher.dispatch<WindowResizeEvent>([this](const WindowResizeEvent& e) { return CameraController::onWindowResized(e); });
 	dispatcher.dispatch<MouseMovedEvent>([this](const MouseMovedEvent& e) { return CameraController::onMouseMoved(e); });
 }

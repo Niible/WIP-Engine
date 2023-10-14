@@ -6,7 +6,6 @@
 #include "../Engine/ImGui/ImGuiLayer.h"
 #include "../Engine/Core/Application/Application.h"
 
-
 class UiLayer : public ImGuiLayer
 {
 public:

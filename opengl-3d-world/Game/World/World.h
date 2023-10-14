@@ -16,8 +16,8 @@ public:
 	void update()
 	{
 		// Get the current chunk coordinates based on the camera's position
-		int current_chunk_x = m_cameraController.getCamera().getPosition().x / (chunk_size - 1);
-		int current_chunk_y = m_cameraController.getCamera().getPosition().z / (chunk_size - 1);
+		int current_chunk_x = m_cameraController.getCamera().getPosition().x / (getChunkSize().x - 1);
+		int current_chunk_y = m_cameraController.getCamera().getPosition().z / (getChunkSize().y - 1);
 
 		for (int x = current_chunk_x - load_radius; x <= current_chunk_x + load_radius; x++) {
 			for (int y = current_chunk_y - load_radius; y <= current_chunk_y + load_radius; y++) {
@@ -30,7 +30,7 @@ public:
 		// Unload chunks outside the load radius
 		for (int i = m_terrainGenerator.loaded_chunks.size() - 1; i >= 0; --i)
 		{
-			auto& chunk = m_terrainGenerator.loaded_chunks[i];
+			const auto& chunk = m_terrainGenerator.loaded_chunks[i];
 			if (abs(chunk->height_map_settings.position.x - current_chunk_x) > load_radius || abs(chunk->height_map_settings.position.y - current_chunk_y) > load_radius) {
 				m_terrainGenerator.unloadChunk(i);
 			}
@@ -40,6 +40,7 @@ public:
 	void onUpdate(float dt)
 	{
 		m_cameraController.onUpdate(dt);
+
 		update();
 
 		RendererAPI::get()->clear();
@@ -64,6 +65,11 @@ public:
 
 	void loadOrGenerateChunk(int x, int y) {
 		m_terrainGenerator.loadOrGenerateChunk({ x, y });
+	}
+
+	const glm::ivec2& getChunkSize() const
+	{
+		return m_terrainGenerator.height_map_settings.size;
 	}
 
 private:
